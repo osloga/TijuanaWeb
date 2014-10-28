@@ -39,7 +39,12 @@
 
             switch (tarea) {
             case 'map':
-                    map = new Map(contenedor, params);           
+                    map = new Map(contenedor, params);   
+                    map.on("Load", function(){
+                        map.graphics.enableMouseEvents();
+                        $(this).tareaEsri('acercar',null,null,null);
+                        
+                    });
                     if ($("#" + contenedor + "").css('height') != '510px') {
                         map.resize();
                     }
@@ -79,14 +84,14 @@
                     break;
                     
             case 'acercar':
-                    map.disableMapNavigation();
+                
                     cuadrado = new Draw(map);
-                    
-                    cuadrado.active(Draw.EXTENT);
-                    
-                    //map.setExtent(gemometry);
-                    cuadrado.deactivate();
-                    map.enableMapNavigation();
+                    on(cuadrado, "Draw-end", function(geometry){
+                        cuadrado.deactivate();
+                        var extent = new Extent(geometry);
+                        map.setExtent(extent);
+                    });
+                   
                     break;
                     
             case 'destroy':
