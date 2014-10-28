@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="assets/css/esri.css" rel="stylesheet" />
+    <link href="assets/css/template.css" rel="stylesheet" />
+  
+    <title>SICC Baja California</title>
+    <script type="text/javascript" src="http://192.168.100.136:8080/arcgis_js_api/library/3.11/init.js"></script>
+    <script src="assets/js/jQuery/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/Esri_dojoPlugIn.js"></script>
+
+    <script>
+        $(this).tareaEsri('map', 'main_content', {
+            basemap:"streets",
+            center: [-117.018582, 32.536757],
+            zoom: 14
+        });
+    </script>
+
+  
+    <script src="assets/js/template.js"></script>
+   
+</head>
+<body>
+    <div id="global_content">
+        <header>
+
+            <div id="titulo_header">Sistema de Informaci&oacute;n Cartogr&aacute;fico Catastral</div>
+            <div id="img_header_der"><img src="assets/img/logo_sigsa.png" width="200" height="65" /></div>
+        </header>
+
+        <nav>
+            <ul id="menu_nav">
+                
+                <li class="menu_items" id="archivo_menu"><a>Usuario</a>
+                    <ul id="archivo_sub" class="subs">
+                        <li class="vistas_item subItem" id="cerrar_sesion">Cerrar Sesi&oacute;n.</li>
+                        <li class="vistas_item subItem" id="bloquear_terminal">Bloquear Terminal.</li>
+                        <li class="vistas_item subItem" id="historial">Historial de Acciones.</li>
+                        <li class="vistas_item subitem" id="salir">Salir.</li>
+                    </ul>
+
+                </li>
+
+                <li class="menu_items" id="vistas_menu"><a>Vistas</a>
+                    <ul id="vistas_sub" class="subs">
+                        <li class="vistas_item subItem" id="vista_visualizacion" data-seccion="vistas/visualizacion.html">Herramienta de Visualizaci&oacute;n</li>
+                        <li class="vistas_item subItem" data-seccion="vistas/altas.html">Herramienta de Edici&oacute;n</li>                        
+                    </ul>
+                </li>
+
+                <li class="menu_items"><a>Cat&aacute;logo</a></li>
+                <li class="menu_items"><a>Edici&oacute;n</a></li>
+                <li class="menu_items" id="catastral_menu"><a>Tramites</a>
+                    <ul id="Ul1" class="subs">
+                        <li class="vistas_item subItem" id="alta_catastral" data-seccion="vistas/altas.html">Alta Catastral</li>
+                        <li class="vistas_item subItem" id="cambio_clave" data-seccion="#">Cambio de clave catastral</li>
+                        <li class="vistas_item subItem" id="avaluo" data-seccion="#">Avaluo catastral</li>
+                        <li class="vistas_item subItem" id="translado_dominio" data-seccion="#">Translado de dominio</li>
+                        <li class="vistas_item subItem" id="catastral_privativo" data-seccion="proceso_catastral/predioPrivativo.html">Proceso de Predios Privativos</li>
+                        <li class="vistas_item subItem" data-seccion="vistas/edicion.html">Proceso de Predios Condominio</li>
+                   </ul>
+                </li>
+
+                <li class="menu_items" id="actualizacion_menu"><a>Actualizaci&oacute;n</a>
+                    <ul id="act_sub" class="subs">
+                        <li class="vistas_item subItem">Actualizaci&oacute;n desde el sistema</li>
+                    </ul>
+                </li>
+
+                <li class="menu_items"><a>Menu 7</a></li>
+                <li class="menu_items"><a>Menu 8</a></li>
+
+            </ul>
+        </nav><!-- termina nav menu-->
+
+
+
+        <!--comienza main_content-->
+        <div role="main" id="main_content">
+
+            <div class="alta_cat">
+
+                <div class="abrir" style="display:none;">
+                    <img src="assets/img/abrir.png" width="40" height="40" style="float:right;"/>
+                </div>
+                <div id="contenido" style="display:none;"></div>
+                
+                
+                <div id="HomeButton" class="FindButton"><img src="img/lupaPT.png" width="30" height="27" alt="lupaPT"/>
+                </div>
+                
+            </div>           
+        </div>
+
+
+    </div>
+    <!--global content-->
+    
+
+</body>
+
+</html>

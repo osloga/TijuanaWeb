@@ -1,0 +1,205 @@
+﻿body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+#global_content {
+    width: 1000px;
+    height: 550px;
+    background-color: #ddefef;
+    margin: auto;
+    padding-top: 5px;
+}
+
+header {
+    width: 1000px;
+    height: 60px;
+    text-align: center;
+    
+    font-size: 24px;
+    background-color: #fff;
+    margin: auto;
+}
+    header div {
+        float:left;
+        text-align:center;
+    }
+
+
+#titulo_header {
+padding-top:15px;
+width:650px;
+height:50px;
+background-color:aliceblue;
+color: #53a836;
+}
+#img_header_der {
+width:350px;
+height:65px;
+background-color:aliceblue;
+}
+/*    ESTILOS DEL MENU    */
+nav {
+    width: 1000px;
+    height: 30px;
+    text-align: left;
+    color: #fff;
+    background-color: #adc2c6;
+    margin: auto;
+}
+
+    nav a {
+        width: 100px;
+        height: auto;
+        font-size: 14px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+
+
+ul {
+    list-style-type: none;
+}
+
+.menu_items {
+    display: inline-table;
+    max-width: 100px !important;
+}
+
+    .menu_items:hover {
+        color: #283aa1;
+    }
+
+.subs {
+    display: none;
+}
+
+#vistas_sub, #Ul1, #archivo_sub, #act_sub {
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #a4bcc1;
+}
+
+.vistas_item {
+    list-style-type: none;
+    display: normal;
+    min-width: 180px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 12px;
+    color: #ddefef;
+    margin-left: -20px;
+}
+
+    .vistas_item:hover {
+        color: #fff;
+    }
+
+
+
+#vistas_menu a {
+    max-width: 100px !important;
+}
+
+#vistas_menu:hover > ul {
+    position: absolute;
+    display: block;
+    z-index: 10;
+}
+#catastral_menu:hover > ul {
+    position: absolute;
+    display: block;
+    z-index: 10;
+}
+
+#archivo_menu:hover > ul {
+    position: absolute;
+    display: block;
+    z-index: 12;
+}
+
+#actualizacion_menu:hover > ul {
+    position:absolute;
+    display:block;
+    z-index:13;
+}
+/*         TERMINA MENU           */
+
+
+/*        CONTENEDOR_MAIN        */
+
+#main_content {
+    width: 1000px;
+    height: 550px;
+    background-color: #adc2c6;
+    border: 1px solid #808080;
+    margin: auto;
+    margin-top: 5px;
+    
+}
+/*     FIN CONTENEDOR_MAIN        */
+
+/*    ESTILO DEL CONTENEDOR DENTRO DEL MAPA*/
+.abrir {
+    position: absolute;
+    z-index: 10;
+    float: right;
+    background-color: #ff6a00;
+    cursor: pointer;
+    
+}
+#HomeButton{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    background-color: rgba(102,102,102,0.80);
+    z-index: 10;
+    border-radius: 5px;
+    top: 200px;
+    right: 300px;
+    cursor: pointer;
+}
+
+/*.FindButton .home{
+    width: 50px;
+    height: 30px;
+    background-color: #ddefef;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    right: 300px;
+    cursor: pointer;
+    background-image: url("/img/lupaPT.png");
+    background-position: center center;
+    background-repeat: no-repeat; 
+ 
+}*/
+#HomeButton:hover{
+    background-color: #333;
+    background-color: rgba(102,102,102,0.90);
+}
+#HomeButton:active {
+        background-color: #ccc;
+        background-color: rgba(102,102,102,0.90);
+    }
+
+/*AQUI SE CONTENDRA TODO LO QUE QUERAMOS VISUALIZAR*/
+#contenido {
+    position:absolute;
+    width:270px;
+    height:549px;
+    background-color:#a4bcc1;
+    border: 1px solid #4b0303;
+    float:right;
+    z-index: 2;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Shapes and Symbols</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+
+    <style>
+      #info {
+        top: 20px;
+        color: #444;
+        height: auto;
+        font-family: arial;
+        right: 20px;
+        margin: 5px;
+        padding: 10px;
+        position: absolute;
+        width: 115px;
+        z-index: 40;
+        border: solid 2px #666;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+      html, body, #mapDiv {
+        padding:0;
+        margin:0;
+        height:100%;
+      }
+      button {
+        display: block;
+      }
+    </style>
+
+    <script src="http://js.arcgis.com/3.11/"></script>
+    <script>
+      var map, tb;
+ dojo.require("esri.toolbars.draw");
+
+      require(["esri/map", "esri/toolbars/draw", "esri/geometry/Extent", "dojo/dom", "dojo/on", "dojo/domReady!"], 
+      function(  Map, Draw, Extent, dom, on  ) {
+        map = new Map("mapDiv", {
+          basemap: "streets",
+          center: [-25.312, 34.307],
+          zoom: 3
+        });
+     map.on("load", initToolbar);
+
+        function initToolbar() {
+          tb = new Draw(map);
+          tb.on("draw-end", addGraphic);
+
+          // event delegation so a click handler is not
+          // needed for each individual button
+          //on(dom.byId("Extentt"), "click", function(evt) {
+            /*if ( evt.target.id === "Extentt" ) {
+              return;
+            }*/
+            //var tool = evt.target.id.toLowerCase();
+            map.disableMapNavigation();
+            tb.activate(esri.toolbars.Draw.EXTENT);
+        
+          //});
+        }
+
+       function addGraphic(evt) {
+          //deactivate the toolbar and clear existing graphics 
+          tb.deactivate();
+          map.setExtent(evt);
+          map.enableMapNavigation();
+        }
+      });
+    </script>
+  </head>
+  
+  <body>
+    
+    <div id="info">
+ 
+      <button id="Extentt">Rectangle</button>
+ 
+    </div>
+
+    <div id="mapDiv"></div>
+
+  </body>
+</html>

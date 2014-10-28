@@ -1,0 +1,16 @@
+﻿section {
+    margin:0.25em auto;
+    font-family:Arial;
+    font-size:11px;
+    border: 2px solid #ff6a00;
+}
+
+.caja-texto {
+    font-family: Arial;
+    font-size: 11px;
+    width:95px;
+    height:15px;
+    text-align:center;
+    background-color: #635050;
+    color:#fff;
+}

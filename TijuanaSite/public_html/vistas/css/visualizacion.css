@@ -1,0 +1,116 @@
+﻿body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+/*  MAIN VISUALIZACIONES */
+
+/*   MAIN_IZQUIERDO */ 
+
+#main_izq {
+width:260px;
+height:530px;
+background-color:#d1dbd7;
+margin-left:5px;
+float:left;
+margin-top:5px;
+}
+#tabla_contenido_wrapper {
+width:220px;
+height:450px;
+background-color:#ffffff;
+margin:auto;
+border:1px solid #808080;
+border-radius:6px;
+}
+#title_tabla_content {
+float:left;
+font-size:12px;
+font-weight:bold;
+margin-left:60px;
+}
+
+#tabla_contenido {
+width:200px;
+height:325px;
+background-color:#ffffff;
+margin:auto;
+border:1px solid #808080;
+border-radius:6px;
+margin-top:40px;
+}
+
+#tabla_superior_btn {
+height:70px;
+width:220px;
+margin:auto;
+
+}
+#btn_main_izq {
+width:200px;
+height:60px;
+border-radius:6px;
+border:1px solid #808080;
+margin:auto;
+margin-top:10px;
+}
+.btn_tabla_bottom {
+width:53px;
+height:50px;
+border:1px solid #808080;
+border-radius:5px;
+margin:2px;
+float:left;
+cursor:pointer;
+text-align:center;
+font-size:10px;
+
+}
+    .btn_tabla_bottom:hover {
+        background-color:#799193;
+    }
+
+#seleccion_capa_vista {
+width:51px;
+height:48px;
+background-color:bisque;
+margin:auto;
+background-color:transparent;
+}
+
+#nav_layers {
+width:200px;
+height:325px;
+background-color:#d1dbd7;
+z-index:11;
+bottom:285px;
+left:120px;
+overflow-y:scroll;
+overflow-x:hidden;
+text-align:left;
+
+}
+    #nav_layers span {
+    width:20px;
+    height:16px;
+    background-color:aliceblue;
+    float:left;
+    position:fixed;
+    text-align:center;
+    padding-top:4px;
+    cursor:pointer;
+
+    }
+        #nav_layers span:hover {
+            background-color:#799193;
+        }
+
+#layers_li {
+margin-left:-20px;
+font-size:14px;
+
+}
+
+/*     FIN MAIN IZQUIERDO     */
+
